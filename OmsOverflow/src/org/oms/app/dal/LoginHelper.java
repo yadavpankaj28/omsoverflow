@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.oms.app.util.HibernateUtil;
 
-import jdk.nashorn.internal.runtime.regexp.JoniRegExp.Factory;
+
 
 public class LoginHelper {
 
@@ -17,7 +17,7 @@ public class LoginHelper {
 		boolean isExist = false;
 
 		session = factory.openSession();
-		query = session.createQuery("select count(*) from LogicDTO where uname=:uname and password=:password");
+		query = session.createQuery("select count(*) from Login where uname=:uname and password=:password");
 		query.setParameter("uname", uname);
 		query.setParameter("password", password);
 		
