@@ -4,10 +4,11 @@
 	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
-		<property name="hibernate.connection.username">scott</property>
-		<property name="hibernate.connection.password">tiger</property>		
+<!-- 	<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>   -->	
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/omsoverflow</property>
+		<property name="hibernate.connection.username">omsoverflow</property>
+		<property name="hibernate.connection.password">omsoverflow</property>		
 		<mapping class="com.oracle.app.dto.UserDTO"/>
 	</session-factory>
 </hibernate-configuration>
